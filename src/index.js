@@ -1,17 +1,18 @@
+import { obtenerChiste } from "./js/http-provider";
 
-const jokeUrl = 'https://api.chucknorris.io/jokes/random#';
 
+//const jokeUrl = 'https://api.chucknorris.io/jokes/random#';
 
 // fetch(jokeUrl).then(resp => {
 //     console.log(resp);
-//     // Opcion Estructurada
+//     // ####### Opcion Estructurada #######
 //     resp.json().then(data => {
 //         console.log(data);
 //         console.log(data.id);
 //         console.log(data.value);
 //     });
 
-//     // Opcion Desectructurarda
+//     // ####### Opcion Desectructurarda #######
 //     resp.json().then(({ id, value }) => {
 //         console.log({ id, value });
 //     });
@@ -19,16 +20,19 @@ const jokeUrl = 'https://api.chucknorris.io/jokes/random#';
 // });
 
 
-//Pro Tips Promesas en cadenas
+// ####### Pro Tips Promesas en cadenas #######
 
-//Opcion Estructurada
+//####### pcion Estructurada #######
 // fetch(jokeUrl)
 // .then(resp => resp.json())
 // .then( console.log );
 
-//Opcion Desestructurada
-fetch(jokeUrl)
-.then(resp => resp.json())
-.then(( {id,value}) => {
-    console.log({id,value});
-});
+//####### Opcion Desestructurada #######
+// fetch(jokeUrl)
+// .then(resp => resp.json())
+// .then(( {id,value}) => {
+//     console.log({id,value});
+// });
+
+
+obtenerChiste().then(console.log);
