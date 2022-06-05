@@ -29,5 +29,4 @@ const obtenerChiste = async () => {
 }
 
 
-
 export { obtenerChiste }
