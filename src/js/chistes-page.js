@@ -12,7 +12,7 @@ const crearChistesHtml = () => {
    <hr>
    <button class="btn btn-primary">Otro Chistes</button>
    <ol class="mt-2 list-group">
-       <li class="list-group-item">.... </li>
+        <li class="list-group-item"> Estructura html de los chistes </li>
    </ol>
 
    `;

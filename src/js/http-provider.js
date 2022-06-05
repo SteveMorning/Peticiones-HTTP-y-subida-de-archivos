@@ -34,6 +34,7 @@ const obtenerUsuarios = async () => {
 
     //const data = await resp.json();  //Modo estructurado
     const { data: usuarios } = await resp.json();
+    //console.log(usuarios);
     return usuarios;
 }
 
