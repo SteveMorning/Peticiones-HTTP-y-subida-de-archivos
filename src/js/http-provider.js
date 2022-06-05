@@ -1,5 +1,6 @@
 
 const jokeUrl = 'https://api.chucknorris.io/jokes/random#';
+const urlUsuarios = 'https://reqres.in/api/users?page=2#'
 
 const obtenerChiste = async () => {
     // ################# A esto le vamos a agregar un TRY y CATCH
@@ -23,10 +24,18 @@ const obtenerChiste = async () => {
         throw err;
     }
 
-
-
-
 }
 
 
-export { obtenerChiste }
+const obtenerUsuarios = async () => {
+    const resp = await fetch(urlUsuarios);
+
+    //Aca se deberia hacer el TRY CATCH
+
+    //const data = await resp.json();  //Modo estructurado
+    const { data: usuarios } = await resp.json();
+    return usuarios;
+}
+
+
+export { obtenerChiste, obtenerUsuarios }
