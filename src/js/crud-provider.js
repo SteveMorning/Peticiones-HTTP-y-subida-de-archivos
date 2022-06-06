@@ -1,14 +1,33 @@
+
 const urlCRUD = 'https://reqres.in/api/users';
 
 
-const getUsuario = async (id)=>{
+const getUsuario = async (id) => {
 
     const resp = await fetch(`${urlCRUD}/${id}`);       // se contruye la direccion del reqres  'https://reqres.in/api/users';
-    const {data} = await resp.json();
+    const { data } = await resp.json();
 
     return data;
 
 }
 
 
-export {getUsuario};
+
+
+const crearUsuario = async (usuario) => {
+
+    const resp = await fetch(urlCRUD, {
+        method: 'POST',
+        body: JSON.stringify(usuario),
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    });
+
+    //console.log( await resp.json());
+    return await resp.json();
+
+}
+
+
+export { getUsuario, crearUsuario };
