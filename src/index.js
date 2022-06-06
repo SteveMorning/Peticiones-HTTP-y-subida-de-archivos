@@ -1,6 +1,7 @@
 //import { init } from "./js/chistes-page";
 //import { init } from "./js/usuarios-page";
 //import { obtenerUsuarios } from "./js/http-provider";
+import { init } from './js/archivos-page';
 import * as CRUD from './js/crud-provider';
 
 
@@ -30,3 +31,8 @@ job:'Developer'
 }).then(console.log);
 
 CRUD.borrarUsuario(1).then(console.log);
+
+
+
+
+init();
