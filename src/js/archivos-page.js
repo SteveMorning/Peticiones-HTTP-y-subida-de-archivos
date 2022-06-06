@@ -1,3 +1,4 @@
+import { subirImagen } from "./http-provider";
 
 const body = document.body;
 let inputFile, imgFoto;
@@ -16,7 +17,7 @@ const crearInputFileHtml = () => {
                     <label>Selecciona una fotografia:</label>
                     <input type="file" accept="image/png">
 
-                    <img id="foto" class="imf-thumbnail" src="" alt="">
+                    <img id="foto" class="img-thumbnail" src="" alt="">
 
                     `;
 
@@ -27,6 +28,7 @@ const crearInputFileHtml = () => {
     inputFile = document.querySelector('input');
     imgFoto = document.querySelector('#foto');
 
+    
 }
 
 
@@ -38,10 +40,13 @@ inputFile.addEventListener('change' , (event) => {
 
     const file = event.target.files[0];
     console.log(file);
-
+    subirImagen(file).then(url => imgFoto.src = url); /asigna la ubicacion devuelta a la foto/
+    
 });
 
 }
+
+
 
 
 export const init = () => {
